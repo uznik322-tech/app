@@ -1,0 +1,204 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+    --radius: 0.625rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+/* ===== Seanest brand ===== */
+:root {
+  --blue: #7EAFF6;
+  --blue-soft: #EAF1FA;
+  --blue-btn: #7CA8EE;
+  --salmon: #FFA384;
+  --salmon-deep: #F28E6E;
+  --ink: #222222;
+  --ink-soft: #444444;
+  --cream: #ffffff;
+  --marine: #222222;
+  --gold: #7CA8EE;
+  --gold-deep: #5B8BD9;
+}
+html { scroll-behavior: smooth; }
+body {
+  background: #ffffff;
+  color: var(--ink);
+  font-family: 'Montserrat', 'Segoe UI', -apple-system, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+.font-display, h1, h2, h3, .serif {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.btn-gold {
+  background: var(--blue-btn); color: #fff;
+  font-size: 13px; font-weight: 600; letter-spacing: .02em;
+  padding: 13px 30px; display: inline-flex; align-items: center; gap: 10px;
+  border-radius: 999px; border: 1px solid transparent;
+  transition: background .2s ease, transform .2s ease;
+  cursor: pointer;
+}
+.btn-gold:hover { background: #5B8BD9; }
+.btn-gold:focus-visible { outline: 2px solid #222; outline-offset: 2px; }
+
+.btn-dark {
+  background: #222; color: #fff; font-size: 15px; font-weight: 600;
+  padding: 16px 44px; border-radius: 999px; border: 3px solid #fff;
+  display: inline-flex; align-items: center; gap: 10px; cursor: pointer;
+  transition: background .2s ease;
+}
+.btn-dark:hover { background: #444; }
+
+.btn-salmon {
+  background: #F5907A; color: #fff; font-size: 12px; font-weight: 600;
+  padding: 12px 26px; border-radius: 6px; cursor: pointer; border: none;
+  transition: background .2s ease; display: inline-flex; align-items: center; gap: 8px;
+}
+.btn-salmon:hover { background: #e57c64; }
+
+.btn-outline {
+  border: 2px solid var(--blue-btn); color: var(--blue-btn);
+  font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+  padding: 12px 26px; border-radius: 8px;
+  display: inline-flex; align-items: center; gap: 8px;
+  transition: all .2s ease; cursor: pointer; background: transparent;
+}
+.btn-outline:hover { background: var(--blue-btn); color: #fff; }
+.btn-outline:focus-visible { outline: 2px solid #222; outline-offset: 2px; }
+
+.link-underline { position: relative; transition: color .2s ease; }
+.link-underline::after {
+  content: ''; position: absolute; left: 0; bottom: -3px; height: 1px; width: 0;
+  background: currentColor; transition: width .25s ease;
+}
+.link-underline:hover::after { width: 100%; }
+
+.kicker {
+  display: inline-flex; align-items: center; gap: 14px;
+  text-transform: uppercase; letter-spacing: .12em;
+  font-size: 12px; font-weight: 600; color: #5B8BD9;
+}
+.kicker::before { content: ''; width: 40px; height: 2px; background: #7CA8EE; }
+
+/* Ken Burns hero */
+@keyframes kenburns {
+  0% { transform: scale(1.09); opacity: 0; }
+  6% { opacity: 1; }
+  92% { opacity: 1; }
+  100% { transform: scale(1); opacity: 0; }
+}
+.kb-slide {
+  position: absolute; inset: 0; opacity: 0;
+  animation: kenburns 24s linear infinite;
+  will-change: transform, opacity;
+}
+@media (prefers-reduced-motion: reduce) {
+  .kb-slide { animation: none; opacity: 0; }
+  .kb-slide:first-child { opacity: 1; }
+  html { scroll-behavior: auto; }
+}
+
+/* Card hover */
+.prop-card { transition: transform .3s ease, box-shadow .3s ease; border-radius: 14px; }
+.prop-card:hover { transform: translateY(-4px); box-shadow: 0 18px 44px -18px rgba(34,34,34,.25); }
+.prop-card img { transition: transform .5s ease; }
+.prop-card:hover img { transform: scale(1.04); }
+
+.watermark {
+  position: absolute; right: 10px; bottom: 8px; pointer-events: none;
+  font-family: 'Montserrat', sans-serif; font-size: 10px; letter-spacing: .14em;
+  text-transform: uppercase; color: rgba(255,255,255,.8);
+  text-shadow: 0 1px 4px rgba(0,0,0,.5);
+}
+
+/* maplibre price markers */
+.price-marker {
+  background: #222; color: #fff; font: 500 12px 'Montserrat', sans-serif;
+  padding: 5px 10px; border-radius: 999px; white-space: nowrap; cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,.3); border: 1.5px solid #fff;
+  transition: transform .15s ease;
+}
+.price-marker:hover { transform: scale(1.08); z-index: 5; }
+.price-marker.rent { background: #2e7d5b; }
+.price-marker.new { background: #F28E6E; }
+.cluster-marker {
+  width: 42px; height: 42px; border-radius: 50%; background: #222;
+  color: #fff; display: flex; align-items: center; justify-content: center;
+  font: 600 14px 'Montserrat', sans-serif; cursor: pointer; border: 2px solid #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,.35);
+}
+.maplibregl-popup-content { padding: 0; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,.3); }
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
